@@ -1,0 +1,22 @@
+command + shift + P
+ctrl + shift + p
+
+-------------------
+
+pwd   : where am i at ?
+ls    : list files aand directories
+ls -a : list everything (hidden and system files and folders)
+
+clear : clear the view
+
+------------------- 
+
+cd : change directory 
+cd / : go to the harddrive root
+cd .. : go one level up
+cd ../.. : go 2 levels up
+cd ../../.. : go 3 levels up ... etc.
+
+mkdir folder-name  : create a new folder
+rm file-name       : remove a file
+rm -rf folder-name : remove a folder
