@@ -1,0 +1,23 @@
+Coding Icebreaker
+
+For this game, you will be randomly assigned to a team of 2 :)
+
+It's a 1 hour rush !!!
+
+Use HTML + CSS ( + JS if you want) to code a simple web-page presenting the team members.
+
+You will need to collaborate remotely, so use github to synchronise your work ! 
+
+A) One team member is in charge to create a remote repo on github
+B) He/She will assign the other team member(s) to the remote repo (see repo/settings/manage access)
+C) Each team member should clone the repo and do a part of the job
+D) Communicate and code a cool page (the who, when, what, how, hobbies, music ... )
+E) Present you work !
+
+
+Each team will make a quick presentation of the page
+Each team member will present the other one !
+
+
+14h - 14h30 git intro
+14h30 - 

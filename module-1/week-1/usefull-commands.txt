@@ -1,11 +1,21 @@
-command + shift + P
-ctrl + shift + p
+##############################################################
+### how to open a folder in vs code from a terminal window ###
+##############################################################
 
--------------------
+command + shift + p    (mac)
+or
+ctrl + shift + p       (windows)
 
-pwd   : where am i at ?
-ls    : list files aand directories
-ls -a : list everything (hidden and system files and folders)
+then choose install "code" command in path
+
+
+##############################
+### usefull shell commands ###
+##############################
+
+pwd   : where am i at on my hard drive ?
+ls    : list all files and directories at my current location
+ls -a : list everything at my current location (including hidden and system files and folders)
 
 clear : clear the view
 
@@ -17,6 +27,15 @@ cd .. : go one level up
 cd ../.. : go 2 levels up
 cd ../../.. : go 3 levels up ... etc.
 
+------------------- 
+
+
 mkdir folder-name  : create a new folder
 rm file-name       : remove a file
 rm -rf folder-name : remove a folder
+
+------------------- 
+
+
+mv hello.txt world.txt : rename a file (or folder)
+mv world.txt ../world.txt : relocate a file (or folder)

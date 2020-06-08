@@ -5,16 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         font-family: Arial, Helvetica, sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 16px;
       }
       .student {
         color: dodgerblue;
       }
+      img {
+        max-width: 100px;
+      }
+      p {
+        /* padding: 10px 20px 5px 20px; */
+        /* padding: 10px 20px 5px; */
+      }
 
+      .block > .target {
+        width: 10%;
+        height: 120px;
+        background: purple;
+      }
+
+      .target {
+        padding: 10px 30px;
+      }
     </style>
   </head>
   <body>
+    <div class="block">
+      <div class="target"></div>
+    </div>
+
     <h1 class="title">HTML : structuring pages / app</h1>
     <p>
       Use lite-server !<br />
@@ -23,6 +55,30 @@
       Use prettier ! <br />
       Know your CSS selectors !<br />
     </p>
+    <hr />
+    <h2 class="title">Block elements</h2>
+    <ul>
+      <li>body</li>
+      <li>div</li>
+      <li>p</li>
+      <li>ol, ul</li>
+      <li>header, section, nav, footer, main</li>
+      <li>form... and so on</li>
+    </ul>
+    <h2 class="title">Inline elements</h2>
+    <ul>
+      <li>img</li>
+      <li>span</li>
+      <li>em</li>
+      <li>i</li>
+      <li>b</li>
+    </ul>
+    <p class="important">
+      Lorem ipsum <span>dolor</span> sit amet <b>consectetur</b>
+      <img src="./img/source-code-as-tree.jpg" alt="an image" /> adipisicing
+      elit. <em>Facere</em>, excepturi.
+    </p>
+    <hr />
     <h2 class="title student">Ironhackers !!!</h2>
     <ul id="student-list" class="list students">
       <li class="student">manon</li>
@@ -42,7 +98,5 @@
       <li class="student">menhaj</li>
       <!-- <li class="student"></li> -->
     </ul>
-
-    
   </body>
 </html>
