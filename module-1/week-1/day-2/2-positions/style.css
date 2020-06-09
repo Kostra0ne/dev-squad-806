@@ -8,6 +8,7 @@
 body {
   padding: 0 20px 20px;
   height: 200vh;
+  font-family: Arial;
 }
 
 ul {
@@ -23,11 +24,21 @@ ul {
   z-index: 1;
   background: black;
   color: whitesmoke;
+  text-align: center;
+  padding: 20px;
 }
 
 #content-main {
   position: relative;
   top: 100px;
+  padding: 10px 0 60px;
+}
+
+.text-block {
+  padding: 20px;
+  border: 1px solid;
+  margin-bottom: 10px;
+  border-radius: .3rem;
 }
 
 .square {
