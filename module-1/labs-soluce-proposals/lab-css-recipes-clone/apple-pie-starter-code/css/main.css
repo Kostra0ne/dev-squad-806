@@ -1,0 +1,111 @@
+/*Some necessary adjustments*/
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,600,700,900");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.title {
+  font-weight: 300;
+}
+
+.header-image.flex {
+  background-image: url("./../images/apple-pie.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 99.7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-image .title {
+  color: white;
+  font-size: 4.5rem;
+}
+
+img.cooking-info {
+  margin: 50px auto 0;
+  max-width: 380px;
+  display: block;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 40px;
+  font-size: 1.2rem;
+}
+
+.container.intro {
+  padding-top: 80px;
+  font-size: 1.45rem;
+}
+
+.container.ingredients,
+.container.directions {
+  border-top: 2px solid #979797;
+}
+
+.container.directions {
+  padding-bottom: 80px;
+}
+
+.container.ingredients .title,
+.container.directions .title {
+  margin: 20px 0;
+}
+
+.container.ingredients .list .item,
+.container.directions .list .item {
+  padding-left: 20px;
+  margin-bottom: 7px;
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+
+.ingredients .list .item::before {
+  content: "-";
+}
+
+.directions .list {
+  counter-reset: my-sec-counter;
+}
+
+.directions .list .item::before {
+  counter-increment: my-sec-counter;
+  content: counter(my-sec-counter) " )";
+}
+
+@media screen and (max-width: 650px) {
+
+  .header-image.flex {
+    height: 40vh;
+  }
+
+  img.cooking-info {
+    max-width: 300px;
+  }
+
+  .container.intro {
+    text-align: center;
+  }
+
+  .container.ingredients .title,
+  .container.directions .title {
+    text-align: center;
+  }
+
+  .container.ingredients .list .item,
+  .container.directions .list .item {
+    padding-left: 0;
+  }
+}
