@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complex Table</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- table>(thead>tr*2)+tbody>tr*3 -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4"></th>
+          <th colspan="4">First group</th>
+          <th colspan="4">Second Group</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th>Person</th>
+          <th>Singular</th>
+          <th>Plural</th>
+          <th>Singular</th>
+          <th>Plural</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3">Present</td>
+          <td>1</td>
+          <td>I code</td>
+          <td>We code</td>
+          <td>I succeed</td>
+          <td>We succeed</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>You code</td>
+          <td>You code</td>
+          <td>You succeed</td>
+          <td>You succeed</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>He/She codes</td>
+          <td>They code</td>
+          <td>He/She succeeds</td>
+          <td>They succeed</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
