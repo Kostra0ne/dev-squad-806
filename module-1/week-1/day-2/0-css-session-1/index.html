@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS - Session I</title>
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/red-target.css" />
+    <link rel="stylesheet" href="./styles/shaped-table.css" />
+    <link rel="stylesheet" href="./styles/purple-margins.css" />
+    <link rel="stylesheet" href="./styles/rows-red-black.css" />
+    <link rel="stylesheet" href="./styles/rows-orange-green.css" />
+  </head>
+  <body>
+    <section class="has-border-bottom">
+      <h1 class="title">CSS Session I</h1>
+      Reproduce the following patterns using HTML and CSS.<br />
+      Use allowed tags and take advantage of given clues.<br />
+      Technical constraints are an integral part of the exercise !<br /><br />
+      <b>Hint >>></b>
+      <br />Use the
+      <a href="https://validator.w3.org/#validate_by_input" target="_blank">
+        W3C validator</a
+      >
+      to ensure the quality of your code !
+    </section>
+
+    <section class="has-border-bottom">
+      <h2 class="title">Iteration 1 - Red target</h2>
+
+      <div class="row space-between">
+        <ul class="list">
+          <li>A 200 * 200 px box containing a 100 * 100 px target.</li>
+          <li>Allowed tags: div</li>
+          <li>Techniques: border, box-sizing, padding</li>
+        </ul>
+        <div id="square">
+          <div id="target"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="has-border-bottom">
+      <h2 class="title">Iteration 2 - Shaped table</h2>
+      <div class="row space-between">
+        <ul class="list">
+          <li>A 300 * 150 table with alternate background<br> on the second row.</li>
+          <li>Allowed tags: table, tr, td</li>
+          <li>Techniques: border, colspan, nth-child</li>
+        </ul>
+        <table id="shaped_table">
+          <tr>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="has-border-bottom">
+      <h2 class="title">Iteration 3 - Purple margins</h2>
+      <div class="row space-between">
+        <ul class="list">
+          <li>A 300px with element containing nested children.</li>
+          <li>Allowed tags: div</li>
+          <li>
+            Techniques: box-sizing, margin, nth-child,<br />
+            padding, text-align
+          </li>
+        </ul>
+        <div id="purple_margins">
+          <div class="box">
+            <div class="line small">a</div>
+            <div class="line large">b</div>
+          </div>
+          <div class="box">
+            <div class="line large">c</div>
+            <div class="line small">d</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="has-border-bottom">
+      <h2 class="title">Iteration 4 - Red &amp; black rows (inline-block)</h2>
+
+      <div class="row space-between">
+        <ul class="list">
+          <li>
+            A 300px width element containing 2 rows,<br> each containing 4 children
+          </li>
+          <li>Allowed tags: div</li>
+          <li>Techniques: display (inline-block), font-size :), width</li>
+        </ul>
+
+        <div id="black_red_rows">
+          <div class="red line">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+          </div>
+          <div class="black line">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="has-border-bottom">
+      <h2 class="title">Iteration 5 - Orange &amp; green rows (flexbox)</h2>
+
+      <div class="row space-between">
+        <ul class="list">
+          <li>
+            A 300px width element containing 2 rows,<br> each containing 4 children
+          </li>
+          <li>Allowed tags: div</li>
+          <li>Techniques: flex</li>
+        </ul>
+
+        <div id="orange_green_rows">
+          <div class="orange line">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+          </div>
+          <div class="green line">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

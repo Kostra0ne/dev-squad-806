@@ -1,0 +1,36 @@
+#purple_margins {
+  width: 300px;
+}
+
+#purple_margins .box {
+  border: 2px solid;
+  padding: 5px 5px 0;
+  margin-bottom: 5px;
+}
+
+#purple_margins .line {
+  height: 25px;
+  background: #a75ca7;
+  color: white;
+  padding: 2.5px 5px;
+}
+
+#purple_margins .line.small {
+  width: 25%;
+}
+
+#purple_margins .line.large {
+  width: 75%;
+}
+
+#purple_margins .box:nth-child(1) .line:nth-child(1) {
+  margin-bottom: 5px;
+}
+
+#purple_margins .box:nth-child(2) .line {
+  text-align: right;
+}
+
+#purple_margins .box:nth-child(2) .line.large {
+  margin-left: 25%;
+}

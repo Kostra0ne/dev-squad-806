@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Selectors I</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 16px;
+      }
+      body {
+        font-family: Arial;
+      }
+
+      #intro {
+        font-size: 1.1rem;
+      }
+
+      .list {
+        line-height: 1.9rem;
+        font-size: 1.1rem;
+      }
+
+      .list .item {
+        padding-left: 10px;
+      }
+
+      .has-border-bottom {
+        padding-bottom: 20px;
+        border-bottom: 1px solid;
+      }
+
+      li:hover {
+        cursor: pointer;
+        color: dodgerblue;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header id="intro" class="has-border-bottom">
+      <h1>CSS Selectors I</h1>
+      Guess what's selected <b>:)</b><br />
+      Explain this with a simple sentence.<br />
+      Try to start with <i>Select all...</i> or
+      <i>Select the...</i>.
+    </header>
+
+    <ol class="list">
+      <li class="item">p</li>
+      <li class="item">div</li>
+      <li class="item">span, a:hover</li>
+      <li class="item">p a</li>
+      <li class="item">#header_main *</li>
+      <li class="item">#header_main a.logo</li>
+      <li class="item">#header_main .logo</li>
+      <li class="item">.user</li>
+      <li class="item">.products, .product</li>
+      <li class="item">.products .product</li>
+      <li class="item">.logo + nav</li>
+      <li class="item">p > a</li>
+      <li class="item">.link.is-selected</li>
+      <li class="item">aside#sidebar_main:hover</li>
+      <li class="item">#sidebar_main nav.is-visible</li>
+    </ol>
+  </body>
+</html>

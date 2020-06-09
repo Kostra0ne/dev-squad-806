@@ -1,0 +1,66 @@
+/* quick reset rule */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 20px 20px;
+  height: 200vh;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+#header-main {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100px;
+  z-index: 1;
+  background: black;
+  color: whitesmoke;
+}
+
+#content-main {
+  position: relative;
+  top: 100px;
+}
+
+.square {
+  width: 120px;
+  height: 120px;
+  border: 2px solid;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.row:first-of-type .square {
+  background: red;
+}
+
+.row:nth-of-type(2) .square {
+  background: blue;
+}
+
+.row:first-of-type .square:nth-child(1) {
+  position: relative;
+}
+
+.row:first-of-type :first-child .target {
+  top: 20px;
+  right: 0;
+  position: absolute;
+}
+
+.target {
+  height: 50px;
+  width: 50px;
+  border: 2px dashed;
+  background: purple;
+}
