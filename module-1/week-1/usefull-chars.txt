@@ -1,11 +1,11 @@
-" "  quote (guillemets)
+" "  quotes (guillemets)
 ' '  single quotes (apostrophe)
 ` `  back ticks (?)
  -   dash (tiret)
  ~   tilde
  /   slash
- \   back slash
+ \   back slash (anti slash)
  #   sharp or hash (dièse)
 ( )  parenthesis (parenthèses)
-{ }  brakets (accolades)
-[ ]  square brakets (crochets)
+{ }  brackets (accolades)
+[ ]  square brackets (crochets)
