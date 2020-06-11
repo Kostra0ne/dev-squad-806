@@ -40,13 +40,16 @@ var nestedValues = [
 
 for (let i = 0; i < nestedValues.length; i++) {
   // we access the first level, eg : the arrays inside the array
-  console.log(nestedValues[i]);
+  // console.log("+++++");
+  console.log("i", i, " > ", nestedValues[i]);
+  // console.log("+++++");
   // to accces each individual value in each nested array, we'll use a inner loop
-  console.log("+++++");
   for (let j = 0; j < nestedValues[i].length; j++) {
-    console.log(nestedValues[i][j]);
-    console.log("*****");
+    console.log("j", j,  " > ", nestedValues[i][j]);
+    // console.log("*****");
   }
 }
+
+
 
 console.log("end of nested loop ....");
