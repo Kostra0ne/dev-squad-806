@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: #1a1a1a;
+  font-family: Menlo;
+  font-size: calc(16px + 0.5vw);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex: 1;
+}
+
+.title.underlined {
+  border-bottom: 3px solid;
+  width: max-content;
+}
+
+.title.underlined.green {
+  border-color: #1ab26b;
+}
+
+.title.underlined.white {
+  border-color: #fff;
+}
+
+#header_main,
+#features,
+#footer_main {
+  padding: 0 40px;
+}
+
+#header_main {
+  align-items: center;
+  height: 80px;
+  justify-content: space-between;
+}
+
+#logo {
+  max-width: 180px;
+}
+
+.is-clickable {
+  cursor: pointer;
+}
+
+#nav_main .link {
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+#nav_main .link:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+#banner {
+  align-items: center;
+  background-image: url("./../images/landing.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: calc(100vh - 80px);
+  justify-content: center;
+}
+
+#banner .title {
+  color: #fff;
+  text-align: center;
+}
+
+#banner .title .intro {
+  display: block;
+  font-size: 4.5rem;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+
+#banner .title .baseline {
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+#features {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+#features > .title {
+  margin: 25px auto 80px;
+  font-size: 2.4rem;
+}
+
+#features .text {
+  text-align: center;
+}
+
+#features .row {
+  align-items: flex-start;
+  width: 100%;
+}
+
+#features .row .title {
+  color: #1ab26b;
+  font-size: 2rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+#features .col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#features .col .img-wrap {
+  align-items: center;
+  display: flex;
+  height: 155px;
+}
+
+#features .col .img {
+  max-width: 140px;
+  width: 20vw;
+}
+
+#footer_main {
+  background: #1ab26b;
+  background-image: url("./../images/spotify-icon-white.png");
+  background-repeat: no-repeat;
+  background-size: 120px;
+  background-position: 50%;
+  color: #fff;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 80px;
+  width: calc(100vw - 80px);
+}
+
+#footer_main .infos {
+  flex: 0 0 45%;
+}
+
+#footer_main .title.underlined {
+  margin-bottom: 60px;
+}
+
+#footer_main .title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+#footer_main .title + .text {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  line-height: 24px;
+  margin-bottom: 25px;
+  max-width: 60%;
+}
+
+#footer_main .wrap {
+  display: flex;
+  flex: 0 0 45%;
+  justify-content: flex-end;
+  position: relative;
+  top: 30px;
+}
+
+#footer_main .img {
+  display: block;
+  max-width: 384px;
+  min-width: 320px;
+  width: 100%;
+}
+
+@media (max-width: 990px) {
+  .title.underlined {
+    width: auto;
+  }
+
+  #features .row {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+
+  #footer_main {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    flex-direction: column;
+  }
+
+  #footer_main .title,
+  #footer_main .infos {
+    text-align: center;
+  }
+
+  #footer_main .title + .text {
+    max-width: none;
+    margin: 0 0 25px;
+  }
+
+  #footer_main .wrap {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 850px) {
+  #footer_main {
+    padding: 20px;
+  }
+
+  #footer_main .title + .text {
+    max-width: 90%;
+  }
+
+  #footer_main .title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #nav_main .link {
+    font-size: 1rem;
+  }
+
+  #nav_main .link:not(:last-of-type) {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 650px) {
+  #logo {
+    max-width: 120px;
+  }
+
+  #header_main,
+  #features,
+  #footer_main {
+    padding: 0 20px;
+  }
+
+  #nav_main .link {
+    font-size: 0.82rem;
+  }
+
+  #banner .title .intro {
+    font-size: 2.7rem;
+  }
+
+  #banner .title .baseline {
+    font-size: 1rem;
+  }
+
+  #features > .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  #features .col .img {
+    max-width: 90px;
+  }
+}
