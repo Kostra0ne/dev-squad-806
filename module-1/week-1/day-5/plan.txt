@@ -1,0 +1,17 @@
+- morning sunshine
+- R, Q & A
+- object's reference
+- callback functions
+
+- HOF:
+-- array.forEach
+-- array.filter
+-- array.map
+-- array.reduce
+-- discover 2 cools youtube channels
+---- HOF: https://www.youtube.com/watch?v=BMUiFMZr7vk
+---- array.sort: https://www.youtube.com/watch?v=MWD-iKzR2c8
+
+- block scope
+- function scope
+- global scope
