@@ -13,12 +13,37 @@ const products = [
 ];
 
 // A - use forEach to print each product in the console
+console.log("--------- A -----------");
+products.forEach(p => console.log(p));
+
 // B - use forEach to print the name of each product with a price that is less than 500
+console.log("--------- B -----------");
+products.forEach(p => p.price < 500 && console.log(p));
+
 // C - use filter to create a new array containing only the products with stock
+console.log("--------- C -----------");
+const inStock = products.filter(p => p.stock > 0);
+console.log("in stock :", inStock);
+
 // D - use map to create a new array of strings, containing the product's names in uppercase
+console.log("--------- D -----------");
+const upperCased = products.map(p => p.name.toUpperCase());
+console.log("uppercased :", upperCased);
+
 // E - use Array.sort() to sort the products by price (ascending order)
+console.log("--------- E -----------");
+products.sort((a, b) => a.price - b.price);
+console.log("ascending prices :", products);
+
 // F - use Array.sort() to sort the products by id (descending order)
+console.log("--------- F -----------");
+products.sort((a, b) => b.id - a.id);
+console.log("descending ids :", products);
+
 // G - use reduce to get the sum of all product's prices
+console.log("--------- G -----------");
+const sum = products.reduce((acc, prod) => acc += prod.price, 0);
+console.log("sum :", sum);
 
 /**
  * hints: 
