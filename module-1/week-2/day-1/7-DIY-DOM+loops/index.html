@@ -16,6 +16,10 @@
         margin-bottom: 10px;
         cursor: pointer;
       }
+      .block.is-selected {
+        background: firebrick;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -23,10 +27,12 @@
     <p>
       Select all the blocks<br />
       Loop through the list<br />
-      1) Print in the console : - the current block id - the current block
-      className
+      1) Print in the console : <br>
+      - the current block's id <br>
+      - the current block's className
       <br />
-      2) write in #block-count, the length of the list
+      2) write in #block-count, the length of the list.<br>
+      3) onclick on each block, toggle a class to change the background
     </p>
     <hr />
     <div id="blocks-count"></div>
@@ -46,6 +52,12 @@
       </div>
       <div id="block-5" class="block">
         block E
+      </div>
+      <div id="block-6" class="block">
+        block F
+      </div>
+      <div id="block-7" class="block">
+        block G
       </div>
     </div>
   </body>
