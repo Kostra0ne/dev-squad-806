@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script type="module" src="./app.js"></script>
-</head>
-<body>
+    <style>
+      body {
+        font-family: Arial;
+      }
+      .block {
+        padding: 10px;
+        border: 2px solid;
+        border-radius: .3rem;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
     <h1 class="title">DIY - DOM loops</h1>
     <p>
-        Select all the blocks<br>
-        Loop through the list<br>
-        1) Print in the console :
-        - the current block id
-        - the current block className
-        <br>
-        2) write in #block-count, the length of the list
+      Select all the blocks<br />
+      Loop through the list<br />
+      1) Print in the console : - the current block id - the current block
+      className
+      <br />
+      2) write in #block-count, the length of the list
     </p>
-    <hr>
+    <hr />
     <div id="blocks-count"></div>
-    <hr>
-    <div id="block-1" class="block">
+    <hr />
+    <div class="blocks">
+      <div id="block-1" class="block">
         block A
-    </div>
-    <div id="block-2" class="block is-selected">
+      </div>
+      <div id="block-2" class="block is-selected">
         block B
-    </div>
-    <div id="block-3" class="block">
+      </div>
+      <div id="block-3" class="block">
         block C
-    </div>
-    <div id="block-4" class="block">
+      </div>
+      <div id="block-4" class="block">
         block D
-    </div>
-    <div id="block-5" class="block">
+      </div>
+      <div id="block-5" class="block">
         block E
+      </div>
     </div>
-</body>
+  </body>
 </html>
