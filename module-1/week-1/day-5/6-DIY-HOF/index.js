@@ -26,24 +26,30 @@ console.log("--------- B -----------");
 products.forEach((p) => p.price < 500 && console.log(p));
 
 // next is same as above, but longer :)
-// products.forEach((product) => {
-//   if (product.price < 500) console.log(product);
-// });
+products.forEach(function (product) {
+  if (product.price < 500) console.log(product);
+});
 
 // C - use filter to create a new array containing only the products with stock
 console.log("--------- C -----------");
-const inStock = products.filter((p) => p.stock > 0);
-console.log("in stock :", inStock);
+// const inStock = products.filter((p) => p.stock > 0);
 
 // next is same as above, but longer :)
-// const inStock = products.filter(function(product) {
-//     if (p.stock > 0) return true;
-//     else return false;
-// });
+const inStock = products.filter(function (product) {
+  if (product.stock > 0) return true;
+  else return false;
+});
+
+console.log("in stock :", inStock);
 
 // D - use map to create a new array of strings, containing the product's names in uppercase
 console.log("--------- D -----------");
-const upperCased = products.map((p) => p.name.toUpperCase());
+// const upperCased = products.map((p) => p.name.toUpperCase());
+
+const upperCased = products.map(function (product) {
+  return product.name.toUpperCase();
+});
+
 console.log("uppercased :", upperCased);
 
 // E - use Array.sort() to sort the products by price (ascending order)
@@ -59,6 +65,11 @@ console.log("descending ids :", products);
 // G - use reduce to get the sum of all product's prices
 console.log("--------- G -----------");
 const sum = products.reduce((acc, prod) => (acc += prod.price), 0);
+
+// const sum = products.reduce(function(accumulator, product) {
+//     return accumulator + product.price
+// }, 0);
+
 console.log("sum :", sum);
 
 /**
