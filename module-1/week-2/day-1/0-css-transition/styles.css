@@ -1,0 +1,26 @@
+.block {
+  height: 200px;
+  width: 200px;
+  background: navy;
+  cursor: pointer;
+  transition: all 10s cubic-bezier(0, 0.96, 1, 0.15);
+}
+
+.block.is-active {
+  height: 100px;
+  width: 100px;
+  background: firebrick;
+}
+
+.circle {
+  background: darkorange;
+  border: 1px solid;
+  border-radius: 50%;
+  height: 500px;
+  width: 500px;
+  transition: border-width 7s ease;
+}
+
+.circle:hover {
+  border-width: 10px;
+}

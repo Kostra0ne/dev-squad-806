@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS - DOM Intro</title>
+    <script type="module" src="./app.js"></script>
+    <style>
+      body {
+        font-family: Arial;
+      }
+      .important {
+        color: dodgerblue;
+      }
+      a {
+        color: darkgoldenrod;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">DOM Intro</h1>
+    <p>
+      The D.O.M is an A.P.I (Application Programming Interface) :<br />
+      Set of rules, functions and properties, designed to help coding you apps
+      faster.<br />
+      The DOM allows you to control very precisely any HTML document !!!
+    </p>
+    <hr />
+    <p>
+      The DOM allows you to select tags from the HTML document and use them in
+      your scripts.<br />
+      Each tag in a DOM script is <i>translated</i> as an <b>Object</b>.<br />
+      All the object inherit of the
+      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Element"
+        >Element</a
+      >
+      Interface.
+    </p>
+    <p>
+      Each Element object has predefined (DOM) properties :<br />
+      (like style, textContent, classList, className, id, innerHTML).<br /><br />
+      Some properties are read-only (you cannot modify them).<br />
+      Most of them are editable !
+    </p>
+    <hr />
+    <h2 class="title">Selection methods (document.)</h2>
+    <ul>
+      <li class="important">
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"
+          target="_blank"
+          rel="noopener noreferrer"
+          >document.getElementById</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName"
+          target="_blank"
+          rel="noopener noreferrer"
+          >document.getElementsByTagName</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName"
+          target="_blank"
+          rel="noopener noreferrer"
+          >document.getElementsByClassName</a
+        >
+      </li>
+      <li class="important">
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          document.querySelector</a
+        >
+      </li>
+      <li class="important">
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          document.querySelectorAll</a
+        >
+      </li>
+      <li class="important">
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          element.querySelectorAll</a
+        >
+      </li>
+      <li class="important">
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll"
+          target="_blank"
+          rel="noopener noreferrer"
+          >element.querySelectorAll</a
+        >
+      </li>
+    </ul>
+    <hr />
+    <div id="block-2" class="block">block 2</div>
+    <div id="block-3" class="block">block 3</div>
+    <div id="block-1" class="block">block 1</div>
+  </body>
+</html>

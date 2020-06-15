@@ -1,0 +1,69 @@
+/* 
+    get inspiration : 
+    http://animista.net/ 
+*/
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.block {
+  height: 150px;
+  width: 150px;
+  border: 2px solid;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+
+/* https://developer.mozilla.org/fr/docs/Web/CSS/@keyframes */
+
+@keyframes changeBackground {
+  0% {
+    background: red;
+  }
+  100% {
+    background: blue;
+  }
+}
+
+@keyframes moveBox {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-200px, 0);
+  }
+  50% {
+    transform: translate(-200px, -200px);
+  }
+  75% {
+    transform: translate(0, -200px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+
+@keyframes rotateBox {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* @keyframes duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+.is-rotating {
+  animation: 10s linear 0s infinite rotateBox
+  , 3s linear 0s alternate infinite changeBackground;
+}
+
+.is-moving {
+  animation: 3s linear 0s alternate infinite moveBox;
+}

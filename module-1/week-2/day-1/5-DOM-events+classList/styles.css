@@ -1,0 +1,17 @@
+.content {
+  transition: all 1s ease-in;
+  height: 100px;
+}
+
+.is-active-bg {
+  background: dodgerblue;
+}
+
+.is-active-color {
+  color: whitesmoke;
+}
+
+.is-hidden {
+  /* visibility: hidden; */
+  display: none;
+}
