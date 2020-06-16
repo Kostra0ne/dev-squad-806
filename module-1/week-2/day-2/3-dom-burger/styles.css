@@ -1,7 +1,7 @@
 @import url("https://overpass-30e2.kxcdn.com/overpass.css");
 
 /* bada55.io Or kuler from Adobe */
-/* SMACSS : a good starting point for template methodology */
+/* SMACSS : a good starting point for template methodology (http://smacss.com/) */
 /* don't forget CSS GRid Garden, a cool game to learn css grids */
 /* you can also have a look to Jen Simmon's youtube channel */
 
@@ -109,6 +109,7 @@ body > * {
     display: none;
   }
 }
+
 @media (max-width: 500px) {
   body {
     /* let's add a row for small screens */
