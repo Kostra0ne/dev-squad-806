@@ -11,14 +11,27 @@
   <body>
     <!-- Emmet Rocks ! -->
     <!-- (header#header-main>nav#nav-main)+aside#sidebar-main+main#main-content+footer#footer-main -->
+
+    <nav id="nav-mobile">
+      <a class="link" href="/"> <i class="fa fa-home"></i> </a>
+      <a class="link" href="/">about</a>
+      <a class="link" href="/">contact</a>
+    </nav>
+
     <header id="header-main">
-        
       <nav id="nav-main">
-        <a href="/">home</a>
+        <a href="/">
+          <i class="fa fa-home"></i>
+        </a>
         <a href="/">about</a>
         <a href="/">contact</a>
       </nav>
+
+      <span id="burger">
+        <i class="fa fa-bars"></i>
+      </span>
     </header>
+    
     <aside id="sidebar-main">
       sidebar
     </aside>

@@ -30,9 +30,53 @@ body {
   background: #1a1a1a;
   grid-column: 1 / 9;
   grid-row: 1 / 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-#nav-main {
+#burger {
+  cursor: pointer;
+}
+
+#nav-mobile {
+  position: absolute;
+  top: 70px;
+  left: -100%;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: left 0.5s linear;
+  background: #1a1a1a;
+}
+
+#nav-mobile.is-active {
+  left: 0;
+}
+
+#nav-mobile .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  border-bottom: 1px solid whitesmoke;
+}
+
+@media (max-width: 650px) {
+  /* hide the nav when the screen size is <= 650px */
+  #nav-main {
+    display: none;
+  }
+}
+
+@media (min-width: 650px) {
+  /* hide the nav when the screen size is >= 650px */
+  #burger {
+    display: none;
+  }
 }
 
 #sidebar-main {
