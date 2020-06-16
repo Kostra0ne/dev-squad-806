@@ -26,6 +26,10 @@ body {
   grid-template-rows: 70px 1fr 120px;
 }
 
+body > * {
+    padding: 0 20px;
+}
+
 #header-main {
   background: #1a1a1a;
   grid-column: 1 / 9;
