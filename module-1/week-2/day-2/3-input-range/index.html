@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS - DOM - Input Range</title>
+    <script src="./range.js" type="module"></script>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .value {
+        transition: color 1s linear;
+      }
+      .danger {
+        color: red;
+      }
+      .warning {
+        color: orange;
+      }
+      .success {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      add an html a input:range<br />
+      listen to input events on the dom script<br />
+      display the current input's value in a p tag
+    </p>
+    <input
+      type="range"
+      id="input-range"
+      min="0"
+      max="100"
+      step="1"
+      value="50"
+    />
+    <p id="current-range-value" class="value warning">50</p>
+  </body>
+</html>
