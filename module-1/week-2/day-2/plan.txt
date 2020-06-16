@@ -1,0 +1,13 @@
+R, Q & A : D.O.M
+
+
+------------------------------------
+
+2 code along :
+- code simple carousel
+- code a mobile nav-bar triggered onclick @burger (with font-awesome icons)
+
+------------------------------------
+
+A tale of This (A.K.A This headache)
+

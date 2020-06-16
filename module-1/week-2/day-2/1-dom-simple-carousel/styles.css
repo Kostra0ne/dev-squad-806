@@ -1,0 +1,29 @@
+#carousel {
+  width: 260px;
+  height: 190px;
+  border: 1px solid;
+  position: relative;
+  box-sizing: border-box;
+}
+
+#carousel .btn {
+  cursor: pointer;
+  height: 20px;
+  width: 35px;
+  position: absolute;
+  top: calc((100% - 20px) / 2);
+}
+
+#carousel .img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+#btn-prev {
+  left: 0;
+}
+
+#btn-next {
+  right: 0;
+}
