@@ -100,4 +100,8 @@ body {
   background: #0d355a;
   grid-column: 1 / 9;
   grid-row: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.8rem;
 }
