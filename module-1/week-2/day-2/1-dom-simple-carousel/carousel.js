@@ -1,9 +1,3 @@
-// step 1:  get the div by id
-// step 2:  get 2 buttons by id OR by class
-// step 3:  listen to clicks on both btns
-// step 4:  define the callback (handleClick function)
-// step 5: in the callback, you should be able to know the current direction (prev OR next)
-
 // DOM ELEMENTS
 const carouselElement = document.getElementById("carousel");
 const btns = document.querySelectorAll(".btn");
@@ -22,14 +16,18 @@ function handleClick(evt) {
   // in a event handler, this, by default, refers to the object that triggered the event
   const btn = evt.target;
   if (btn.id == "btn-prev") {
-    if (count === 0) count = imgs.length - 1;
-    else count -= 1;
-    console.log("get the previous image", count);
+    count = count === 0 ? imgs.length - 1 : count - 1;
   } else {
     count += 1;
     if (count === imgs.length) count = 0;
-    console.log("get the next image", count);
   }
+  img.src = `./imgs/${imgs[count]}`;
+}
+
+function handleClickShorter(evt) {
+  const btn = evt.target;
+  if (btn.id == "btn-prev") count = count === 0 ? imgs.length - 1 : count - 1;
+  else count = count === imgs.length - 1 ? 0 : count + 1;
   img.src = `./imgs/${imgs[count]}`;
 }
 
