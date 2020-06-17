@@ -1,0 +1,24 @@
+R, Q & A
+
+------------------------------------
+
+D.I.Y : color blocks
+
+------------------------------------
+
+Timing functions :
+- setTimeout
+- setInterval
+- clearTimeout
+- clearInterval
+
+------------------------------------
+
+Code along : use timing functions to animate font-awesome icons
+
+------------------------------------
+
+A tale of This (A.K.A This headache) , ep 2 (this binding : regular and fat arrow functions)
+
+
+17h30 : Game presentations
