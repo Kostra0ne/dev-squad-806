@@ -1,0 +1,13 @@
+#square {
+    border: 2px solid;
+    padding: 50px;
+    width: 200px;
+    height: 200px;
+}
+
+#target {
+    border: 2px dashed;
+    background: #e41414;
+    height: 100px;
+    width: 100px;
+}

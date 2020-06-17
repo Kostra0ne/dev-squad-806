@@ -1,0 +1,50 @@
+#orange-blocks {
+  border: 3px solid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 60px);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 8px;
+  width: 420px;
+}
+
+#orange-blocks .box {
+  background: darkorange;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-right: 10px;
+}
+
+#orange-blocks .box:nth-child(3) {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#orange-blocks .box:nth-child(5) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#orange-blocks .box:nth-child(6) {
+  background: #efb256;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+
+#orange-blocks .box:nth-child(7) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+

@@ -1,0 +1,15 @@
+.concentric-container {
+  height: 150px;
+  width: 150px;
+}
+
+.concentric-container .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 50%;
+  width: calc(100% * .9);
+  height: calc(100% * .9);
+}
+

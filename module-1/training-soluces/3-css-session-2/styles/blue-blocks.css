@@ -1,0 +1,67 @@
+#blue-blocks {
+  border: 3px solid;
+  width: 420px;
+  padding: 8px;
+}
+
+#blue-blocks .box {
+  background: cornflowerblue;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+#blue-blocks .row {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* first row */
+#blue-blocks > .row:nth-child(1) {
+  background: silver;
+  margin-bottom: 10px;
+}
+
+/* first row  blocks */
+#blue-blocks > .row:nth-child(1) .box {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#blue-blocks > .row:nth-child(1) .box:last-child {
+  margin-right: 0;
+}
+
+/* second row */
+#blue-blocks > .row:nth-child(2) > .row:nth-child(1) {
+  width: 60%;
+  background: #9e8d86;
+  margin-right: 10px;
+}
+
+#blue-blocks > .row:nth-child(2) > .row:nth-child(2) {
+  flex: 1;
+  background: #5d4b44;
+}
+
+/* second row blocks */
+
+#blue-blocks > .row:nth-child(2) .box {
+  flex: calc(50% - 5px);
+}
+
+#blue-blocks > .row:nth-child(2) .box:nth-child(odd) {
+  margin-right: 10px;
+}
+
+#blue-blocks > .row:nth-child(2) .box:nth-child(-n+2) {
+  margin-bottom: 10px;
+}
+
+

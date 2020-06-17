@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS - Session II</title>
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/black-white-targets.css" />
+    <link rel="stylesheet" href="./styles/green-dots.css" />
+    <link rel="stylesheet" href="./styles/blue-blocks.css" />
+    <link rel="stylesheet" href="./styles/orange-blocks.css" />
+    <link rel="stylesheet" href="./styles/concentric-circles.css" />
+  </head>
+  <body>
+    <section class="has-border-bottom">
+      <h1 class="title">CSS Session II</h1>
+      Reproduce the following patterns using HTML and CSS.<br />
+      Use allowed tags and take advantage of given clues.<br />
+      Technical constraints are an integral part of the exercise !<br /><br />
+      <b>Hint >>></b>
+      <br />Use the
+      <a href="https://validator.w3.org/#validate_by_input" target="_blank">
+        W3C validator</a
+      >
+      to ensure the quality of your code !
+    </section>
+
+    <section class="has-border-bottom">
+      <h2 class="title">Iteration 1 - Black & white targets</h2>
+
+      <div class="row space-between">
+        <ul class="list">
+          <li>
+            A 200 * 200 px box containing a 20 * 20 px targets.<br />
+          </li>
+          <li>Allowed tags: div</li>
+          <li>
+            Techniques: position relative & absolute, top, right, bottom, left
+          </li>
+        </ul>
+        <div id="black-white-container">
+          <div class="target"></div>
+          <div class="target"></div>
+          <div class="target"></div>
+          <div class="target"></div>
+          <div class="target"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="has-border-bottom">
+      <h2 class="title">Iteration 2 - Green dots</h2>
+
+      <div class="row space-between">
+        <ul class="list">
+          <li>Will you master floats ?</li>
+          <li>Allowed tags: div</li>
+          <li>Techniques: float, clear, border-radius, display: ?</li>
+        </ul>
+        <div>
+          <div class="green-dots-container">
+            <div class="dot float-l">A1</div>
+            <div class="dot float-r">B2</div>
+            <div class="dot float-l">C1</div>
+            <div class="dot float-r">D1</div>
+          </div>
+          <div class="green-dots-container">
+            <div class="dot">A2</div>
+            <div class="dot float-r">B2</div>
+            <div class="dot float-l">C2</div>
+            <div class="dot float-r">D2</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="has-border-bottom">
+      <h2 class="title">Iteration 3 - Blue blocks (flexbox)</h2>
+
+      <div class="row space-between">
+        <ul class="list">
+          <li>
+            Use
+            <a
+              href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+              target="_blank"
+              >flex-box</a
+            >
+            to reproduce the following pattern.<br />
+          </li>
+          <li>Allowed tags: div</li>
+          <li>
+            Techniques: align-items, display:flex, calc,<br />
+            flex-wrap, justify-content, margin, padding
+          </li>
+        </ul>
+        <div id="blue-blocks">
+          <div class="row">
+            <div class="box">A1</div>
+            <div class="box">A2</div>
+            <div class="box">A3</div>
+            <div class="box">A4</div>
+          </div>
+          <div class="row">
+            <div class="row flex-wrap">
+              <div class="box">B1</div>
+              <div class="box">B2</div>
+              <div class="box">B3</div>
+              <div class="box">B4</div>
+            </div>
+            <div class="row flex-wrap">
+              <div class="box">C1</div>
+              <div class="box">C2</div>
+              <div class="box">C3</div>
+              <div class="box">C4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="has-border-bottom">
+      <h2 class="title">Iteration 4 - Orange blocks (grid)</h2>
+
+      <div class="row space-between">
+        <ul class="list">
+          <li>
+            Use a
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout"
+              target="_blank"
+              rel="noopener noreferrer"
+              >grid-layout</a
+            >
+            to reproduce the following pattern
+          </li>
+          <li>Allowed tags: div</li>
+          <li>
+            Techniques: display, padding, margin,<br />
+            justify-content, align-items
+          </li>
+        </ul>
+        <div id="orange-blocks">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+          <div class="box">7</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="has-border-bottom">
+      <h2 class="title">Bonus - Concentric circles</h2>
+
+      <div class="row space-between">
+        <ul class="list">
+          <li>
+            It's mandala time :<br />
+            Your code should work with <b>any</b> amount of nested circles !
+          </li>
+          <li>Allowed tags: div (ex: div > div > div ...)</li>
+          <li>Techniques: ???</li>
+        </ul>
+        <div>
+          <div class="concentric-container">
+            <div class="circle">
+              <div class="circle">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+          <div class="concentric-container">
+            <div class="circle">
+              <div class="circle">
+                <div class="circle">
+                  <div class="circle">
+                    <div class="circle">
+                      <div class="circle"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="concentric-container">
+            <div class="circle">
+              <div class="circle">
+                <div class="circle">
+                  <div class="circle">
+                    <div class="circle">
+                      <div class="circle">
+                        <div class="circle">
+                          <div class="circle">
+                            <div class="circle">
+                              <div class="circle">
+                                <div class="circle">
+                                  <div class="circle">
+                                    <div class="circle">
+                                      <div class="circle">
+                                        <div class="circle">
+                                          <div class="circle">
+                                            <div class="circle">
+                                              <div class="circle">
+                                                <div class="circle"></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

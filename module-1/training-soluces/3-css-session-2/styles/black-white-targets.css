@@ -1,0 +1,38 @@
+#black-white-container {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+#black-white-container .target {
+  background: black;
+  height: 20px;
+  position: absolute;
+  width: 20px;
+}
+
+#black-white-container .target:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+#black-white-container .target:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+
+#black-white-container .target:nth-child(3) {
+  bottom: 0;
+  right: 0;
+}
+
+#black-white-container .target:nth-child(4) {
+  bottom: 0;
+  left: 0;
+}
+
+#black-white-container .target:nth-child(5) {
+  top: calc(50% - 20px / 2);
+  left: calc(50% - 20px / 2);
+}

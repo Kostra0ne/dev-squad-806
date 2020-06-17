@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML Session I</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial;
+      }
+
+      table,
+      td,
+      th {
+        border: 1px solid;
+      }
+
+      td,
+      th {
+        padding: 7px;
+        text-align: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: #31c2fe;
+      }
+
+      table.merged {
+        border-collapse: collapse;
+      }
+      .red {
+        color: #fa7a55;
+      }
+      .blue {
+        color: #23d;
+      }
+      .green {
+        color: #208075;
+      }
+
+      .has-border-bottom {
+        padding-bottom: 20px;
+        border-bottom: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="has-border-bottom">
+      <h1>HTML – Session 1</h1>
+      <p>
+        Reproduce the following patterns using HTML and CSS. <br />
+        Your code should be valid ! <br />
+        Use the
+        <a href="https://validator.w3.org/#validate_by_input" target="_blank">
+          W3C validator</a
+        >
+        to check your document structure.<br>
+        Do not hesitate to consult the documentation available on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN website</a>.
+      </p>
+      <p>
+        <b>Hint >>></b>
+        <br />Create a folder named “assets” in your project folder and put an
+        image, a video and an audio file ( You can find some on the internet).
+      </p>
+    </section>
+    <section class="has-border-bottom">
+      <h2>Iteration 1 - Inline & Block elements</h2>
+      <h3>Baby Steps</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <img src="./assets/image-1.jpg" alt="" style="max-width: 220px" /><br />
+        <span class="red">Corrupti</span>, molestias illo fugiat quo ad quos
+        deleniti cum nam iste ? Distinctio <span class="blue">dolor</span> nulla
+        at pariatur eveniet
+        <span class="green">necessitatibus</span> praesentium molestias, ullam
+        cupiditate.
+      </p>
+    </section>
+
+    <section class="has-border-bottom">
+      <h2>Iteration 2 - Simple list</h2>
+      <ol>
+        <li>Open a text editor (Visual Studio Code, Atom, Sublime Text...)</li>
+        <li>Type some (valid) code</li>
+        <li>Open your file with a web-server (lite-server...)</li>
+        <li>Visit the page on your favorite browser</li>
+      </ol>
+    </section>
+
+    <section class="has-border-bottom">
+      <h2>Iteration 3 - Nested List</h2>
+      <ol>
+        <li>News</li>
+        <li>
+          Culture
+          <ul>
+            <li>
+              Cinema
+              <ol>
+                <li>Drama</li>
+                <li>Action</li>
+                <li>
+                  Science Fiction
+                  <ul>
+                    <li>Best Ranked</li>
+                    <li>More viewed</li>
+                    <li>Lastest</li>
+                  </ul>
+                </li>
+                <li>Horror</li>
+              </ol>
+            </li>
+            <li>Music</li>
+            <li>literature</li>
+          </ul>
+        </li>
+        <li>Fooding</li>
+        <li>Sport</li>
+      </ol>
+    </section>
+
+    <section class="has-border-bottom">
+      <h2>Iteration 4 - Simple table</h2>
+      <table>
+        <tr>
+          <td>Spades</td>
+          <td>Clubs</td>
+        </tr>
+        <tr class="red">
+          <td>Diamonds</td>
+          <td>Hearts</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="has-border-bottom">
+      <h2>Iteration 5 - A more complex table...</h2>
+      <table class="merged">
+        <thead>
+          <tr>
+            <th colspan="2"></th>
+            <th colspan="2">First group</th>
+            <th colspan="2">Second Group</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>Person</th>
+            <th>Singular</th>
+            <th>Plural</th>
+            <th>Singular</th>
+            <th>Plural</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">Present</td>
+            <td>1</td>
+            <td>I code</td>
+            <td>We code</td>
+            <td>I succeed</td>
+            <td>We succeed</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>You code</td>
+            <td>You code</td>
+            <td>You succeed</td>
+            <td>You succeed</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>He/She codes</td>
+            <td>They code</td>
+            <td>He/She succeeds</td>
+            <td>They succeed</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="has-border-bottom">
+      <h2>Iteration 6 - Media players</h2>
+      <p>
+        Use the HTML5 audio and video tags to reproduce the examples below.<br />
+        Pay attention to formats (mp3/ogg for audio, mp4/webm for video).<br />
+        Test it on different browsers.<br />
+      </p>
+      <video src="/assets/video.mp4" controls></video>
+      <hr>
+      <audio src="./assets/test-sound-1.mp3" controls></audio>
+    </section>
+  </body>
+</html>

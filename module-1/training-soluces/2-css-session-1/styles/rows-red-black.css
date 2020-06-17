@@ -1,0 +1,27 @@
+#black_red_rows {
+  color: white;
+  width: 300px;
+  margin-top: 16px;
+}
+
+#black_red_rows .line {
+  height: 50px;
+  font-size: 0;
+}
+
+#black_red_rows .line.red {
+  background: #e41414;
+}
+
+#black_red_rows .line.black {
+  background: black;
+}
+
+#black_red_rows .line .box {
+  display: inline-block;
+  width: 25%;
+  height: 50px;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 50px;
+}

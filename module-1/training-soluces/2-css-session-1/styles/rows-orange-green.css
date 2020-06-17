@@ -1,0 +1,25 @@
+#orange_green_rows {
+  color: white;
+  width: 300px;
+  margin-top: 16px;
+}
+
+#orange_green_rows .line {
+  display: flex;
+}
+
+#orange_green_rows .orange.line {
+  background: darkorange;
+}
+
+#orange_green_rows .green.line {
+  background: forestgreen;
+}
+
+#orange_green_rows .box {
+  flex: 1;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

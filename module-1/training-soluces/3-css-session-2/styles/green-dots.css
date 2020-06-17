@@ -1,0 +1,36 @@
+.green-dots-container {
+  border: 1px solid;
+  padding: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.green-dots-container .dot {
+  border-radius: 50%;
+  background: yellowgreen;
+  color: black;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 10px;
+}
+
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+.green-dots-container:first-of-type .dot:nth-child(3) {
+  clear: both;
+}
+
+.green-dots-container:last-of-type .dot:nth-child(3) {
+  clear: both;
+  /* float: left; */
+}
