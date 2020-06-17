@@ -14,11 +14,13 @@ Timing functions :
 
 ------------------------------------
 
+A tale of This (A.K.A This headache) , ep 2 (this binding : regular and fat arrow functions)
+
+------------------------------------
+
 Code along : use timing functions to animate font-awesome icons
 
 ------------------------------------
 
-A tale of This (A.K.A This headache) , ep 2 (this binding : regular and fat arrow functions)
+17h45 : Previous cohort's game presentation
 
-
-17h30 : Game presentations

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module" src="./app.js"></script>
+    <style>
+      body {
+        font-family: Arial;
+      }
+      #blocks {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .block {
+        width: 100px;
+        height: 100px;
+        margin: 0 10px 10px 0;
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="number" id="block-count" />
+    <input type="color" id="block-bg" />
+    <button id="btn-create">create</button>
+    <hr />
+    <div id="blocks"></div>
+  </body>
+</html>
