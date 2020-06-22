@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    font-family: Arial;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+
+#lives {
+    margin-bottom: 20px;
+}
+
+#lives .icon {
+    margin-right: 7px;
+}
+
+#board {
+    display: grid;
+    height: 80vh;
+    width: 80vh;
+    background: silver;
+}
+
+#board  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid #0000000d;
+}
+
+.player {
+    height: 20px;
+    width: 20px;
+    border: 2px dashed;
+    position: relative;
+}
