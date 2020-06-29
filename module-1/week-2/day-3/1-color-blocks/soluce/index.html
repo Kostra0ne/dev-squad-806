@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>js-dom-session-4</title>
+    <script type="module" src="./colored-blocks.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  <body>
+   <header id="header-main">
+    <h1 class="title">Color blocks</h1>
+    <p>
+      Code a DOM program to add, edit and remove color blocks on the
+      document. <br />
+      Use the provided video and implement all the features.
+    </p>
+
+   </header>
+
+    <nav id="widgets" class="widget">
+      <input id="input_blocks_count" type="number" min="1" value="1" class="input" />
+      <input id="input_color" type="color" class="input" />
+      <button id="btn_create" class="btn">create</button>
+      <button id="btn_remove" class="btn">remove selected</button>
+      <button id="btn_reset" class="btn">reset</button>
+    </nav>
+    <main id="blocks"></main>
+  </body>
+</html>

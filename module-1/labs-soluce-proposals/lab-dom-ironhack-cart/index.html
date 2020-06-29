@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="text/javascript" src="./js/index.js"></script>
+  <title>Ironhack cart</title>
+</head>
+<body>
+  <h1 class="title main">Ironhack</h1>
+  <h2 class="title main">Merchandising Shop ($<span id="price_total">0</span>)</h2>
+  <hr>
+  <form id="create_product">
+    <!-- input.new-product-name+input:number.new-product-price+button#btn_new_product -->
+    <input type="text" id="new_product_name" class="input new-product-name" value="test product">
+    <input type="number" id="new_product_price" class="input new-product-price" value="1" min="1" step="1">
+    <button id="btn_new_product" class="btn create">create a new product</button>
+  </form>
+  <hr>
+  <div id="list_products">
+    <span class="empty-list">No products yet</span>
+  </div>
+
+</body>
+</html>
