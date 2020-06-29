@@ -1,0 +1,28 @@
+/* 
+ QUICK BONUS:
+
+ CSS VARS ARE SUPAAA NICE
+
+ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+*/
+
+/* attach some css variables to the tree's root */
+:root {
+  /* variable declaration... */
+  --main-color: #101; /* you can reuse those everywhere */
+  --active-color: dodgerblue;
+  /* and update them in one single location, instead of in all files  */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  color: var(--main-color); /* syntax to use var */
+}
+
+.btn:hover {
+  color: var(--active-color); /* vars are called by their names  */
+}

@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="./app.js">
+    <script type="module" src="with-callback.js"></script>
+    <!-- <script type="module" src="./with-promise.js"></script> -->
 </head>
 <body>
+    <h1 class="title">Dealing with async...</h1>
+    <h2 class="title">Create a small JS + HTML (+ CSS) program</h2>
+    
     <p>
-        Create a small JS + HTML + CSS program<br>
         @click on a button :<br>
         1 / Use a Promise to display some text in the document after a certain time...<br>
-        2 / When ready, try to do the same with a simple callback<br>
+        2 / When ready, try to do the same with a simple callback<br><br>
 
-        what technique is you favorite ?
+        What is you favorite technique ? (so far...)<br>
+        Then.. try to chain this action multiple time, you'll see the benefit of promises right away<br><br>
 
-        bonus : apply a nice transition to it :)
+        <b>Bonus</b> : apply a nice transition to it :) or use a spinning loader from fontawesome ;)
     </p>
+    <hr>
+    <div id="diy">
+        <p id="target-text"></p>
+        <button id="do-action-in-close-future" class="btn">ok</button>
+    </div>
 </body>
 </html>
