@@ -1,0 +1,31 @@
+<h1 class="title">Home</h1>
+{{!-- if you want to generate some html out of a variable, you must use the 3 curly brackets --}}
+{{!-- else, the hbs helpers will always be wrapped in {{}} --}}
+{{{ htmlAsAVariable }}}
+
+{{!-- HBS HELPERS --}}
+
+{{!-- if the provided value is truthy --}}
+{{#if isMonday}}
+<div class="day monday">
+    OH damn it's monday again :/
+</div>
+{{/if}}
+
+{{!-- if the provided value is falsy --}}
+{{#unless isMonday}}
+<div class="day monday">
+    I hate monday, but today is just fine !!!
+</div>
+{{/unless}}
+
+<hr>
+
+<ul>
+    {{#each blogPosts}}
+    <li>
+        <h3 class="title">{{this.title}}</h3>
+        <p>{{this.text}}</p>
+    </li>
+    {{/each}}
+</ul>

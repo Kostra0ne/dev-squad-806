@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:root */
+
+:root {
+  --color-main: #101;
+  --color-secondary: dodgerblue;
+}
+
+body {
+  font-family: Arial;
+  font-size: 14px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  color: var(--color-secondary);
+}
