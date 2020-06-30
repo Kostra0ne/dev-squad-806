@@ -39,7 +39,7 @@ app.get("/", (req, res) => {
         text: "lorem ipsum",
       },
       {
-        title: "Be kind with Javaists, they are suffering",
+        title: "Be kind with Java coders, they are suffering",
         text: "JS really rocks",
       },
     ],

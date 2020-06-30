@@ -8,12 +8,18 @@
 
 :root {
   --color-main: #101;
+  --color-clear: whitesmoke;
   --color-secondary: dodgerblue;
 }
 
 body {
   font-family: Arial;
   font-size: 14px;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .link {
@@ -23,4 +29,9 @@ body {
 
 .link:hover {
   color: var(--color-secondary);
+}
+
+#nav-main {
+  background-color: var(--color-main);
+  color: var(--color-clear);
 }

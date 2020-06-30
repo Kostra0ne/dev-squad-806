@@ -10,10 +10,10 @@
 
 <body>
     {{!-- layout.hbs is the index.html (entry point) for HBS --}}
-    <h1>hello hbs layout !!!</h1>
-    {{!--  --}}
-    {{!-- below HBS will automatically include the current view inside this body placeholder --}}
     {{> navMain }}
+    {{!-- 
+        below HBS will automatically include the current view inside this body placeholder 
+    --}}
     {{{ body }}}
     {{!-- mind the 3 curly brackets, they are mandatory --}}
 </body>

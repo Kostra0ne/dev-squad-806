@@ -24,8 +24,24 @@
 <ul>
     {{#each blogPosts}}
     <li>
-        <h3 class="title">{{this.title}}</h3>
+        <h3 class="title">{{@index}} -> {{this.title}}</h3>
         <p>{{this.text}}</p>
+    </li>
+    {{/each}}
+</ul>
+
+<hr>
+
+<ul>
+    {{#each blogPosts}}
+    <li>
+        {{#each this}}
+        <ul>
+            <li>
+                <span>{{@key}} {{this}}</span>
+            </li>
+        </ul>
+        {{/each}}
     </li>
     {{/each}}
 </ul>
