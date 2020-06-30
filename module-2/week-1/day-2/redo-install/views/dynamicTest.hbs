@@ -1,0 +1,38 @@
+{{title}}
+<hr>
+<button id="btn-axios">get some !!!</button>
+<div id="axios-target"></div>
+<hr>
+
+{{theResponse}}
+<hr>
+
+{{hobbies}}
+<hr>
+
+{{userInfos}}
+<hr>
+
+{{#each hobbies}}
+<p>{{@index}} -> {{this}}</p>
+{{/each}}
+
+<hr>
+{{#each userInfos}}
+<p>{{@key}} -> {{this}}</p>
+{{/each}}
+
+<hr>
+{{#if loveJS}}
+<p>
+    <span>I &lt;3 JS </span>
+    {{else}}
+    <i> I HATE JS TOO</i>
+</p>
+{{/if}}
+
+{{#unless loveJS}}
+<p>
+    I HATE JS !!!
+</p>
+{{/unless}}
