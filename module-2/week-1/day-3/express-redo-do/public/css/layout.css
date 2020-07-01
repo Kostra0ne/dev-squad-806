@@ -1,4 +1,12 @@
+body > * {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 #header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -9,4 +17,11 @@
 #content-main {
   position: relative;
   top: var(--header-main-height);
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+#nav-main {
+  position: relative;
+  color: var(--color-light);
 }
