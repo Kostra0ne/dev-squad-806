@@ -1,0 +1,6 @@
+/* SMACSS METHOD */
+@import url("./variables.css");
+@import url("./base.css");
+@import url("./layout.css");
+/* then you can load some modules : avatar, forms, sliders, etc. */
+/* keep'em separated */

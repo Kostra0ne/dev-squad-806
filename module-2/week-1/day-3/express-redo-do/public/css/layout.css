@@ -1,0 +1,12 @@
+#header-main {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: var(--color-dark);
+  height: var(--header-main-height);
+}
+
+#content-main {
+  position: relative;
+  top: var(--header-main-height);
+}
