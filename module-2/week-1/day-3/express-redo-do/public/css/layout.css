@@ -19,9 +19,17 @@ body > * {
   top: var(--header-main-height);
   padding-top: 20px;
   padding-bottom: 60px;
+  min-height: calc(100vh - (var(--header-main-height) + var(--footer-main-height)));
 }
 
 #nav-main {
   position: relative;
   color: var(--color-light);
+}
+
+#footer-main {
+  height: var(--footer-main-height);
+  background: var(--color-dark);
+  position: relative;
+  top: var(--header-main-height);
 }

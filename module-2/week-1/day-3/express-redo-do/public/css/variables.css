@@ -4,5 +4,6 @@
   --color-1: dodgerblue;
   --color-2: firebrick;
   --color-3: goldenrod;
-  --header-main-height: 120px;
+  --header-main-height: 80px;
+  --footer-main-height: 100px;
 }
