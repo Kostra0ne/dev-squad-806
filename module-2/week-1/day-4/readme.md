@@ -1,0 +1,1 @@
+today's code is [here](https://github.com/Kostra0ne/mob-programming-challenge)
