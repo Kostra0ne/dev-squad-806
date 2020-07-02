@@ -28,6 +28,9 @@ body > * {
 }
 
 #footer-main {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   height: var(--footer-main-height);
   background: var(--color-dark);
   position: relative;
