@@ -1,0 +1,45 @@
+<h1 class="title">Manage Labels</h1>
+<table class="table labels">
+    <thead class="head">
+        <tr>
+            <th>name</th>
+            <th>logo</th>
+            <th>city</th>
+            <th>country</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody class="body">
+
+        {{#unless labels}}
+        <tr>
+            <td colspan="6">no labels yet</td>
+        </tr>
+        {{/unless}}
+
+        {{#each labels}}
+        <tr>
+            <td>
+                {{this.name}}
+            </td>
+            <td>
+               <img src="{{this.logo}}" alt="logo" style="max-width: 42px;">
+            </td>
+            <td>
+                {{this.city}}
+            </td>
+            <td>
+                {{this.country}}
+            </td>
+            <td>
+                <a class="fas fa-pen" href="/labels/update/{{this._id}}"></a>
+            </td>
+            <td>
+                <a class="fas fa-times" href="/labels/delete/{{this._id}}"></a>
+            </td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>

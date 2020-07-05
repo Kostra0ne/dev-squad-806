@@ -1,0 +1,22 @@
+{
+  "name": "artistify",
+  "version": "1.0.0",
+  "description": "a simple app to learn more about CRUD, models relations, ajax",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./bin/www -e .hbs,.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "hbs": "^4.1.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.8.10"
+  }
+}
