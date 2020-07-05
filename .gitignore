@@ -3,3 +3,7 @@ node_modules/
 0-random-group/
 .DS_Store
 
+*.soluce*
+
+module-2/week-2/artistify-full
+module-2/lab-soluce-proposals/mongo-lab-queries
