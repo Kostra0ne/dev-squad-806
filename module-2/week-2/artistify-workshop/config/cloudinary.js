@@ -1,5 +1,5 @@
 const cloudinary = require("cloudinary");
-const cloudinaryStorage = require("multer-storage-cloudinary");
+const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const multer = require("multer");
 
 // giving access to your cloudinary account
@@ -10,7 +10,7 @@ cloudinary.config({
 });
 
 // uploading the file to yopurt cloudinary account
-const storage = cloudinaryStorage({
+const storage = new CloudinaryStorage({
   cloudinary,
   folder: "user-pictures"
   // params below is only needed if uploading media types other than images (video, audio...)
