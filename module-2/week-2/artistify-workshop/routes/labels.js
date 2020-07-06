@@ -47,8 +47,9 @@ router.get("/delete/:id", (req, res, next) => {
 router.post("/create", uploader.single("logo"), (req, res, next) => {
   const newLabel = req.body;
   console.log(req.file);
-  
-  if (req.file) newLabel.logo = req.file.path;
+  // req.file, si defined, est un object
+  // ici, req.file contient les infos du fichiers qui a déjà eté uploadé vers le storage definit pour multer
+  if (req.file) newLabel.logo = req.file.path; // on peut accéder à l'url du fichier hébergé chez cloudinary (ou tout autre storage associé à multer lors de la config)
 
   labelModel
     .create(newLabel) // use the model and try doc insertion in database
