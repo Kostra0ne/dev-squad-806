@@ -1,1 +1,24 @@
-todo : label form
+<form id="form-create-label" method="post" action="/labels/create" class="form">
+
+    <h1 class="title">Create new Label</h1>
+
+    <label class="label" for="name">Name</label>
+    <input class="input" id="name" name="name" type="text" required value="test label">
+
+    <label class="label" for="city">City</label>
+    <input class="input" id="city" name="city" type="text" value="Faketown">
+
+    <label class="label" for="streetNb">Street number</label>
+    <input class="input" id="streetNb" name="streetNb" type="text" value="13">
+
+    <label class="label" for="street">Street</label>
+    <input class="input" id="street" name="street" type="text" value="foo street">
+
+    <label class="label" for="country">Country</label>
+    <input class="input" id="country" name="country" type="text" value="baz">
+
+    <label class="label" for="logo">Logo</label>
+    <input class="input" id="logo" type="text" name="logo" value="" placeholder="paste a image url here">
+
+    <button class="btn">create !</button>
+</form>

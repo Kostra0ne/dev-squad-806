@@ -1,1 +1,20 @@
-todo : label update form
+<form id="form-create-label" method="post" action="/labels/update/{{label._id}}" class="form">
+    <h1 class="title">Edit Label</h1>
+
+    <label for="name">name</label>
+    <input class="input" id="name" name="name" type="text" required value="{{label.name}}">
+
+    <label for="city">City</label>
+    <input class="input" id="city" name="city" type="text" value="{{label.city}}">
+
+    <label for="streetNb">Street number</label>
+    <input class="input" id="streetNb" name="streetNb" type="text" value="{{label.streetNb}}">
+
+    <label for="street">Street</label>
+    <input class="input" id="street" name="street" type="text" value="{{label.street}}">
+
+    <label for="country">Country</label>
+    <input class="input" id="country" name="country" type="text" value="{{label.country}}">
+
+    <button class="btn">edit !</button>
+</form>
