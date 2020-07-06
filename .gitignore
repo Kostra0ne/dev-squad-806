@@ -5,5 +5,7 @@ node_modules/
 
 *.soluce*
 
+.env
+
 module-2/week-2/artistify-full
 module-2/lab-soluce-proposals/mongo-lab-queries
