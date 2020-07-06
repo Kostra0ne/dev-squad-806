@@ -1,6 +1,5 @@
 require("dotenv").config();
 require("./../config/mongodb");
-
 const StyleModel = require("./../models/Style");
 
 const demoStyles = [
@@ -22,9 +21,5 @@ const demoStyles = [
 ];
 
 StyleModel.create(demoStyles)
-.then(dbRes => {
-    console.log(dbRes)
-})
-.catch(dbErr => {
-    console.error(dbErr)
-})
+.then(dbRes => console.log(dbRes))
+.catch(dbErr => console.error(dbErr))
