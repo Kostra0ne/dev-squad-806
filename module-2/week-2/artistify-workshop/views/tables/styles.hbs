@@ -1,1 +1,30 @@
-todo : table styles
+<h1 class="title">Manage Styles</h1>
+<table class="table labels">
+    <thead class="head">
+        <tr>
+            <th>name</th>
+            <th>color</th>
+            <th>wiki</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody class="body">
+        {{#unless styles}}
+        <tr colspan="5">no styles yet</tr>
+        {{/unless}}
+        {{#each styles}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.color}}</td>
+            <td>{{this.wikiURL}}</td>
+            <td>
+                <a class="fas fa-pen" href="/styles/update/{{this._id}}"></a>
+            </td>
+            <td>
+                <a class="fas fa-times" href="/styles/delete/{{this._id}}"></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

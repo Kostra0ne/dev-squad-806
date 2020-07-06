@@ -1,4 +1,4 @@
-const cloudinary = require("cloudinary");
+const cloudinary = require("cloudinary").v2;
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const multer = require("multer");
 
@@ -6,17 +6,14 @@ const multer = require("multer");
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,
   api_key: process.env.CLOUDINARY_KEY,
-  api_secret: process.env.CLOUDINARY_SECRET
+  api_secret: process.env.CLOUDINARY_SECRET,
 });
 
-// uploading the file to yopurt cloudinary account
 const storage = new CloudinaryStorage({
-  cloudinary,
-  folder: "user-pictures"
-  // params below is only needed if uploading media types other than images (video, audio...)
-  // params: {
-  //     ressource_type: "raw"
-  // }
+  cloudinary: cloudinary,
+  params: {
+    folder: "user-pictures",
+  },
 });
 
 const fileUploader = multer({ storage }); // a middleware designed to parse file from requests and associate to req.file

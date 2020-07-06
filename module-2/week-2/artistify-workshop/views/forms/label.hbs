@@ -1,5 +1,5 @@
-<form id="form-create-label" method="post" action="/labels/create" class="form">
-
+<form id="form-create-label" method="post" action="/labels/create" class="form" enctype="multipart/form-data">
+    {{!-- enctype multipart form-data allows us to send files to the server --}}
     <h1 class="title">Create new Label</h1>
 
     <label class="label" for="name">Name</label>
@@ -17,8 +17,10 @@
     <label class="label" for="country">Country</label>
     <input class="input" id="country" name="country" type="text" value="baz">
 
-    <label class="label" for="logo">Logo</label>
-    <input class="input" id="logo" type="text" name="logo" value="" placeholder="paste a image url here">
+    <label class="label" for="logo">
+        <i class="fas fa-cloud-upload-alt fa-2x"></i>
+    </label>
+    <input type="file" name="logo" id="logo" class="is-hidden">
 
     <button class="btn">create !</button>
 </form>

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = new express.Router();
 const labelModel = require("../models/Label");
-
+const uploader = require("./../config/cloudinary");
 // *********************************************
 // ALL THESE ROUTES ARE PREFIXED WITH "/labels"
 // *********************************************
@@ -44,11 +44,12 @@ router.get("/delete/:id", (req, res, next) => {
     .catch(next);
 });
 
-router.post("/create", (req, res, next) => {
+router.post("/create", uploader.single("logo"), (req, res, next) => {
   const newLabel = req.body;
-  // if (req.file) newLabel.logo = req.file.secure_url; // check if an image has been uploaded
-  if (req.body.logo === "") newLabel.logo = undefined;
+  console.log(req.file);
   
+  if (req.file) newLabel.logo = req.file.path;
+
   labelModel
     .create(newLabel) // use the model and try doc insertion in database
     .then(() => {
