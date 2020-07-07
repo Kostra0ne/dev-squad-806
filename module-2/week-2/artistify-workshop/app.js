@@ -46,6 +46,8 @@ app.locals.isAdmin = true; // let's set every user as admin for the inital dev p
 
 // ROUTING
 app.use("/", require("./routes"));
+app.use("/albums", require("./routes/albums"));
+app.use("/artists", require("./routes/artists"));
 app.use("/labels", require("./routes/labels"));
 app.use("/styles", require("./routes/styles"));
 

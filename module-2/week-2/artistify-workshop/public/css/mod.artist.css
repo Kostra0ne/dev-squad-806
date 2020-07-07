@@ -15,4 +15,19 @@
   border: 1px solid;
   padding: 10px;
   border-radius: 0.3rem;
+  position: relative;
+}
+
+.list.artists .artist .style {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-bottom-right-radius: .3rem;
+  z-index: -1;
+}
+
+.artist .picture {
+  max-width: 300px;
 }

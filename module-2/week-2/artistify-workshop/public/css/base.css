@@ -52,8 +52,16 @@ hr {
   justify-content: space-between;
 }
 
+.row.flex-start {
+  justify-content: flex-start;
+}
+
 .row.flex-end {
   justify-content: flex-end;
+}
+
+.row.centered {
+  align-items: center;
 }
 
 .col {

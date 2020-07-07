@@ -7,9 +7,6 @@
 }
 
 .form .row {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   margin-bottom: 15px;
 }
 
@@ -81,6 +78,10 @@
   margin-left: 20px;
 }
 
+.form .img.preview {
+  max-width: 300px;
+}
+
 .form .btn {
   display: flex;
   justify-content: center;
@@ -90,3 +91,4 @@
   outline: none;
   margin-top: 15px;
 }
+

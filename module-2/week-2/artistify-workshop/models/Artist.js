@@ -11,10 +11,10 @@ const artistSchema = new Schema({
   description: String,
   isBand: Boolean,
   rates: [Number],
-  // style: {
-  //   type: Schema.Types.ObjectId,
-  //   ref: "Style"
-  // },
+  style: {
+    type: Schema.Types.ObjectId,
+    ref: "Style"
+  },
 });
 
 const artistModel = mongoose.model("Artist", artistSchema);

@@ -2,6 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const labelModel = require("../models/Label");
 const uploader = require("./../config/cloudinary");
+
 // *********************************************
 // ALL THESE ROUTES ARE PREFIXED WITH "/labels"
 // *********************************************

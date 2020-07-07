@@ -42,8 +42,8 @@ function protectAdminRoute(req, res, next) {
     else res.redirect("/login");
 }
 
-// si tu utilises use avec une fonction en argument (un middleware)
-// ce middleware sera executé à chaque requête entrante
+// si tu utilises app.use(function) avec un middleware en argument...
+// ce middleware sera executé à chaque requête entrante !
 app.use(logger);
 
 
