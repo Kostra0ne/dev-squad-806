@@ -1,0 +1,38 @@
+<h1 class="title">Manage Artists</h1>
+<table class="table artists">
+    <thead>
+        <th>name</th>
+        <th>genre</th>
+        <th>description</th>
+        <th>is band ?</th>
+        <th>rates</th>
+        <th>edit</th>
+        <th>remove</th>
+    </thead>
+    <tbody>
+        {{#unless artists}}
+        <tr>
+            <td colspan="7">sorry, no artists registered yet :/</td>
+        </tr>
+        {{/unless}}
+        {{#each artists}}
+        <tr>
+            <td> <a class="link" href="/artists/page/{{this._id}}">{{this.name}}</a></td>
+            <td>{{this.style.name}}</td>
+            <td>{{this.description}}</td>
+            <td>{{this.isBand}}</td>
+            <td>todo</td>
+            <td>
+                <a class="link" href="/artists/update/{{this._id}}">
+                    <i class="fas fa-pen"></i>
+                </a>
+            </td>
+            <td>
+                <a class="link" href="/artists/delete/{{this._id}}">
+                    <i class="fas fa-times"></i>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,51 @@
+<form action="/artists/update/{{artist._id}}" method="post" class="form" enctype="multipart/form-data">
+    <h1 class="title">Update artist</h1>
+
+    <label class="label" for="name">name</label>@
+    <input class="input" id="name" type="text" name="name" value="{{artist.name}}">
+
+    <label class="label" for="style">style</label>
+    <select class="input" id="style" name="style">
+    {{#each styles}}
+        {{#compare this.name ../artist.style.name operator="===" }}
+        <option value="{{this._id}}" selected>{{this.name}}</option>
+        {{/compare }}
+        {{#compare this.name ../artist.style.name operator="!=" }}
+        <option value="{{this._id}}">{{this.name}}</option>
+        {{/compare }}
+    {{/each}}
+    </select>
+
+    <label class="label" for="description">description</label>
+    <textarea class="input" id="description" type="text" name="description">
+        {{~artist.description~}}
+        {{!-- above, the ~ will trim the description (remove extra whitespaces) --}}
+    </textarea>
+
+    <label class="label" for="picture">
+        <span>Pick a picture</span>
+        <i class="fas fa-cloud-upload-alt fa-2x"></i>
+    </label>
+
+    <input type="file" name="picture" id="picture" class="is-hidden">
+    <hr>
+    <img class="img preview" src="{{artist.picture}}" alt="{{artist.name}}'s' picture">
+    <hr>
+
+    <label class="label">is band ?</label>
+
+    <div class="row space-between centered"  style="max-width: 50%;">
+        {{#if artist.isBand }}
+        <label for="is-band">yes</label>
+        <input id="is-band" type="radio" name="isBand" value="yes" checked>
+        <label for="is-not-band">no</label>
+        <input id="is-not-band" type="radio" name="isBand" value="no">
+        {{else}}
+        <label for="is-band">yes</label>
+        <input id="is-band" type="radio" name="isBand" value="yes">
+        <label for="is-not-band">no</label>
+        <input id="is-not-band" type="radio" name="isBand" value="no" checked>
+        {{/if}}
+    </div>
+    <button class="btn">ok</button>
+</form>

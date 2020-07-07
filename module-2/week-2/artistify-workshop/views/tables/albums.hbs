@@ -1,0 +1,46 @@
+<h1 class="title">Manage Albums</h1>
+<table class="table albums">
+    <thead class="head">
+        <tr>
+            <th>title</th>
+            <th>artist</th>
+            <th>cover</th>
+            <th>released</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody class="body">
+
+        {{#unless albums}}
+        <tr>
+            <td colspan="6">no albums yet</td>
+        </tr>
+        {{/unless}}
+
+        {{#each albums}}
+
+        <tr>
+            <td>
+                <a class="link" href="/albums/page/{{this._id}}">{{this.title}}</a>
+            </td>
+            <td>
+                <a class="link" href="/artists/page/{{this.artist._id}}">{{this.artist.name}}</a>
+            </td>
+            <td>
+                <img class="cover" src="{{this.cover}}" alt="{{this.title}} album cover">
+            </td>
+            <td>
+                {{format-date }}
+            </td>
+            <td>
+                <a class="link fas fa-pen" href="/albums/update/{{this._id}}"></a>
+            </td>
+            <td>
+                <a class="link fas fa-times" href="/albums/delete/{{this._id}}"></a>
+            </td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>

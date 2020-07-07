@@ -1,0 +1,16 @@
+<h1 class="title">All artists</h1>
+<hr>
+
+{{#unless artists}}
+<p>No artists yet.</p>
+{{/unless}}
+
+<ul class="list artists">
+    {{#each artists}}
+    <li class="artist">
+        <div class="style" style="background-color: {{this.style.color}};" class="style"></div>
+        <h3 class="title">{{this.name}}</h3>
+        <a class="link" href="/artists/page/{{this._id}}">... see more</a>
+    </li>
+    {{/each}}
+</ul>
