@@ -1,0 +1,15 @@
+<h1 class="title">All albums</h1>
+<hr>
+
+{{#unless albums}}
+<p>No albums yet.</p>
+{{/unless}}
+
+<ul class="list albums">
+    {{#each albums}}
+    <li class="album">
+        {{this.title}}
+        <a class="link" href="/albums/page/{{this._id}}">... see more</a>
+    </li>
+    {{/each}}
+</ul>

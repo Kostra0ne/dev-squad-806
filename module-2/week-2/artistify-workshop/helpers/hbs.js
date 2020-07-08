@@ -3,6 +3,8 @@ const moment = require("moment");
 
 // CUSTOM HELPERS
 
+hbs.registerHelper("toJSON", (val) => JSON.stringify(val));
+
 // function below: add the ternary operator functionnality to .hbs files
 // usage : {{ ternary true "yay" "nay " }} => prints yay
 // usage : {{ ternary NaN "yay" "nay " }} => prints nay
@@ -66,14 +68,8 @@ hbs.registerHelper("compare", function(lvalue, rvalue, options) {
   }
 });
 
-hbs.registerHelper("format-date", function(rule) {
-  console.log("----rule------+");
-  console.log(rule);
-  console.log("-----this-----+");
-  console.log(this);
-  // if (!rule) rule = "YYYY-MM-DD";
-  return "foo"
-  // return moment(date).format(rule);
+hbs.registerHelper("format-date", function(date) {
+  return moment(date).format("YYYY-MM-DD");
 });
 
 hbs.registerHelper("toto", function(number) {

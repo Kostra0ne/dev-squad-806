@@ -1,4 +1,29 @@
-<h1 class="title">Create Album</h1>
-<form method="post" class="form">
-    <p>todo : form</p>
+<h1 class="title">Add Album</h1>
+<form method="post" action="/albums/create" class="form" enctype="multipart/form-data">
+
+    <label for="title">title</label>
+    <input class="input" id="title" name="title" type="text">
+    <label for="artist">artist</label>
+
+    <select name="artist" id="artist" class="input">
+        {{#each artists}}
+        <option value="{{this._id}}">{{this.name}}</option>
+        {{/each}}
+    </select>
+
+
+    <label for="label">label</label>
+    <select name="label" id="label" class="input" required>
+        {{#each labels}}
+        <option value="{{this._id}}">{{this.name}}</option>
+        {{/each}}
+    </select>
+
+    <label for="cover">cover</label>
+    <input class="input" id="cover" name="cover" type="file">
+
+
+    <label for="releaseDate">releaseDate</label>
+    <input class="input" id="releaseDate" name="releaseDate" type="date" value="{{format-date album.releaseDate ''}}">
+    <button class="btn">create !</button>
 </form>
