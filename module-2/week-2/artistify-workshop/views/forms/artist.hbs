@@ -5,6 +5,7 @@
     <input class="input" id="name" type="text" name="name" value="test artist">
 
     <label class="label" for="style">style</label>
+    
     <select class="input" id="style" name="style">
     {{#each styles}}
         <option value="{{this._id}}">{{this.name}}</option>
@@ -20,6 +21,8 @@
         <span>Pick a picture</span>
         <i class="fas fa-cloud-upload-alt fa-2x"></i>
     </label>
+
+    <img id="image-preview" src="" alt="" class="is-hidden img preview">
 
     <input type="file" name="picture" id="picture" class="is-hidden">
 

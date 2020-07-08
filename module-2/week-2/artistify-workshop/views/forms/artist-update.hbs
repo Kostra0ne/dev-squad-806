@@ -1,7 +1,7 @@
 <form action="/artists/update/{{artist._id}}" method="post" class="form" enctype="multipart/form-data">
     <h1 class="title">Update artist</h1>
 
-    <label class="label" for="name">name</label>@
+    <label class="label" for="name">name</label>
     <input class="input" id="name" type="text" name="name" value="{{artist.name}}">
 
     <label class="label" for="style">style</label>
@@ -18,8 +18,8 @@
 
     <label class="label" for="description">description</label>
     <textarea class="input" id="description" type="text" name="description">
+        {{!-- below, the "~ ~" around the var will trim the description (remove extra whitespaces) --}}
         {{~artist.description~}}
-        {{!-- above, the ~ will trim the description (remove extra whitespaces) --}}
     </textarea>
 
     <label class="label" for="picture">
@@ -29,7 +29,7 @@
 
     <input type="file" name="picture" id="picture" class="is-hidden">
     <hr>
-    <img class="img preview" src="{{artist.picture}}" alt="{{artist.name}}'s' picture">
+    <img id="image-preview" class="img preview" src="{{artist.picture}}" alt="{{artist.name}}'s' picture">
     <hr>
 
     <label class="label">is band ?</label>

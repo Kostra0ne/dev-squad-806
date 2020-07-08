@@ -15,8 +15,6 @@ router.get("/all", (req, res, next) => {
     .find() // retreive all the documents in the artists collection
     .populate("style")
     .then((dbResults) => {
-      console.log(dbResults);
-
       res.render("lists/artists", {
         artists: dbResults,
       });
@@ -27,6 +25,7 @@ router.get("/all", (req, res, next) => {
 router.get("/page/:id", (req, res, next) => {
   artistModel
     .findById(req.params.id)
+    .populate("style")
     .then((artist) => {
       res.render("page-artist", { artist });
     })
@@ -40,6 +39,9 @@ router.get("/admin", (req, res, next) => {
     .find() // retreive all the documents in the artists collection
     .populate("style")
     .then((dbResults) => {
+
+      console.log(dbResults);
+      
       res.render("tables/artists", {
         artists: dbResults,
       });
@@ -49,7 +51,10 @@ router.get("/admin", (req, res, next) => {
 
 router.get("/create", async (req, res) => {
   try {
-    res.render("forms/artist", { styles: await styleModel.find() });
+    res.render("forms/artist", {
+      js: ["form-artist"],
+      styles: await styleModel.find(),
+    });
   } catch (err) {
     next(err);
   }
@@ -76,10 +81,10 @@ router.post("/create", uploader.single("picture"), (req, res, next) => {
 router.get("/update/:id", (req, res, next) => {
   Promise.all([
     artistModel.findById(req.params.id).populate("style"),
-    styleModel.find()
+    styleModel.find(),
   ])
     .then((dbRes) => {
-      res.render("forms/artist-update", { artist: dbRes[0], styles: dbRes[1] });
+      res.render("forms/artist-update", { js: ["form-artist"], artist: dbRes[0], styles: dbRes[1] });
     })
     .catch(next);
 });

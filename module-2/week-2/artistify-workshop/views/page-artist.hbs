@@ -1,5 +1,9 @@
 <div class="artist">
-    <h1>{{artist.name}}</h1>
+    <h1>{{artist.name}} (
+
+        <a class="link" href="{{artist.style.wikiURL}}" target="_blank">{{artist.style.name}}</a>
+
+        )</h1>
     <hr>
     <img class="picture" src="{{artist.picture}}" alt="{{artist.name}}'s picture'">
     <hr>
