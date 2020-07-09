@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "cloudinary": "^1.22.0",
     "connect-flash": "^0.1.1",
     "dotenv": "^8.2.0",

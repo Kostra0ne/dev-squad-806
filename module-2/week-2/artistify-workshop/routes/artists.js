@@ -3,6 +3,7 @@ const router = new express.Router();
 const artistModel = require("../models/Artist");
 const styleModel = require("../models/Style");
 const uploader = require("./../config/cloudinary");
+const protectAdminRoute = require("./../middlewares/protectAdminRoute");
 
 // *********************************************
 // ALL THESE ROUTES ARE PREFIXED WITh "/artists"
@@ -34,7 +35,7 @@ router.get("/page/:id", (req, res, next) => {
 
 // PRIVATE ROUTES
 
-router.get("/admin", (req, res, next) => {
+router.get("/admin", protectAdminRoute, (req, res, next) => {
   artistModel
     .find() // retreive all the documents in the artists collection
     .populate("style")
@@ -49,7 +50,7 @@ router.get("/admin", (req, res, next) => {
     .catch(next);
 });
 
-router.get("/create", async (req, res) => {
+router.get("/create", protectAdminRoute, async (req, res) => {
   try {
     res.render("forms/artist", {
       js: ["form-artist"],
@@ -60,7 +61,7 @@ router.get("/create", async (req, res) => {
   }
 });
 
-router.post("/create", uploader.single("picture"), (req, res, next) => {
+router.post("/create", protectAdminRoute, uploader.single("picture"), (req, res, next) => {
   const { name, description, isBand, style } = req.body;
 
   artistModel
@@ -78,7 +79,7 @@ router.post("/create", uploader.single("picture"), (req, res, next) => {
     .catch(next);
 });
 
-router.get("/update/:id", (req, res, next) => {
+router.get("/update/:id", protectAdminRoute, (req, res, next) => {
   Promise.all([
     artistModel.findById(req.params.id).populate("style"),
     styleModel.find(),
@@ -89,7 +90,7 @@ router.get("/update/:id", (req, res, next) => {
     .catch(next);
 });
 
-router.post("/update/:id", uploader.single("picture"), (req, res, next) => {
+router.post("/update/:id", protectAdminRoute, uploader.single("picture"), (req, res, next) => {
   const updatedArtist = req.body;
 
   if (req.file) updatedArtist.picture = req.file.path;
@@ -104,7 +105,7 @@ router.post("/update/:id", uploader.single("picture"), (req, res, next) => {
       .catch(next);
 });
 
-router.get("/delete/:id", (req, res, next) => {
+router.get("/delete/:id", protectAdminRoute, (req, res, next) => {
   artistModel
     .findByIdAndDelete(req.params.id)
     .then((dbRes) => {

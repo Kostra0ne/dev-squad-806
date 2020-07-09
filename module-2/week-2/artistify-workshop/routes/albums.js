@@ -4,6 +4,8 @@ const artistModel = require("../models/Artist");
 const albumModel = require("../models/Album");
 const labelModel = require("../models/Label");
 const uploader = require("./../config/cloudinary");
+const protectAdminRoute = require("./../middlewares/protectAdminRoute");
+
 
 // *********************************************
 // ALL THESE ROUTES ARE PREFIXED WiTh "/albums"
@@ -50,7 +52,7 @@ router.get("/page/:id", (req, res, next) => {
     .catch(next);
 });
 
-router.get("/admin", (req, res, next) => {
+router.get("/admin", protectAdminRoute, (req, res, next) => {
   albumModel
     .find() // retreive all the documents in the albums collection
     .populate("artist")
@@ -63,7 +65,7 @@ router.get("/admin", (req, res, next) => {
     .catch(next);
 });
 
-router.get("/create", (req, res, next) => {
+router.get("/create", protectAdminRoute, (req, res, next) => {
   Promise.all([artistModel.find(), labelModel.find()])
     .then((dbRes) => {
       res.render("forms/album", {
@@ -74,7 +76,7 @@ router.get("/create", (req, res, next) => {
     .catch(next);
 });
 
-router.get("/update/:id", (req, res, next) => {
+router.get("/update/:id", protectAdminRoute, (req, res, next) => {
   Promise.all([
     albumModel.findById(req.params.id).populate("artist"),
     labelModel.find(),
@@ -90,7 +92,7 @@ router.get("/update/:id", (req, res, next) => {
     .catch(next);
 });
 
-router.get("/delete/:id", (req, res, next) => {
+router.get("/delete/:id", protectAdminRoute, (req, res, next) => {
   albumModel
     .findByIdAndDelete(req.params.id)
     .then((dbRes) => {
@@ -100,7 +102,7 @@ router.get("/delete/:id", (req, res, next) => {
     .catch(next);
 });
 
-router.post("/create", uploader.single("cover"), (req, res, next) => {
+router.post("/create", protectAdminRoute,  uploader.single("cover"), (req, res, next) => {
   const newAlbum = req.body;
 
   if (req.file) newAlbum.cover = req.file.path;
@@ -114,7 +116,7 @@ router.post("/create", uploader.single("cover"), (req, res, next) => {
     .catch(next);
 });
 
-router.post("/update/:id", (req, res, next) => {
+router.post("/update/:id", protectAdminRoute, (req, res, next) => {
   albumModel
     .findByIdAndUpdate(req.params.id, req.body)
     .then(() => {

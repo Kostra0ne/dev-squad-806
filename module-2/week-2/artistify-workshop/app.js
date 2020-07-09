@@ -38,14 +38,20 @@ app.use(flash());
 
 // CUSTOM MIDDLEWARES
 // expose flash message to the hbs templates, if any flash-message is defined
-// app.use(require("./middlewares/exposeFlashMessage"));
+app.use(require("./middlewares/exposeFlashMessage"));
+
 
 /* expose login status to the hbs templates */
-app.locals.isAdmin = true; // let's set every user as admin for the inital dev phase
-// app.use(require("./middlewares/exposeLoginStatus")); // this will be usefull for the login/signin lesson
+// app.locals.isLoggedIn = true;
+// app.locals.isAdmin = true;
+// let's set every user as admin for the inital dev phase
+app.use(require("./middlewares/exposeLoginStatus"));
+
+// this will be usefull for the login/signin lesson
 
 // ROUTING
 app.use("/", require("./routes"));
+app.use("/auth", require("./routes/auth"));
 app.use("/albums", require("./routes/albums"));
 app.use("/artists", require("./routes/artists"));
 app.use("/labels", require("./routes/labels"));

@@ -1,6 +1,11 @@
 <nav id="nav-main" class="nav">
-    <a href="/" class="link">| home </a>
+    <a href="/" class="link">home </a>
+    {{#if isLoggedIn}}
     <a href="/artists/all" class="link">| all artists</a>
     <a href="/albums/all" class="link">| all albums</a>
-    <a href="/admin" class="link">| <i class="fa fa-user fa-1x"></i></a>
+    <a href="/admin">| <i class="fa fa-user fa-1x"></i></a>
+    <a href="/auth/signout">| <i class="fas fa-sign-out-alt"></i></a>
+    {{else}}
+    <a href="/auth/signin" class="link">| <i class="fa fa-user fa-1x"></i></a>
+    {{/if}}
 </nav>
