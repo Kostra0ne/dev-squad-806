@@ -35,7 +35,7 @@ router.post("/signup", uploader.single("avatar"), (req, res, next) => {
       .then(dbRes => {
         if (dbRes) { // si dbRes n'est pas null
           req.flash("error", "sorry, email is already taken :/");
-          return res.redirect("/auth/signup"); //
+          return res.redirect("/auth/signup");
         }
 
         const salt = bcrypt.genSaltSync(10); // https://en.wikipedia.org/wiki/Salt_(cryptography)
@@ -79,6 +79,7 @@ router.post("/signin", (req, res, next) => {
 
         req.session.currentUser = clone; // user is now in session... until session.destroy
         return res.redirect("/admin");
+        
       } else {
         // encrypted password match failed
         req.flash("error", "wrong credentials");

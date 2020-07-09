@@ -42,12 +42,21 @@ app.use(require("./middlewares/exposeFlashMessage"));
 
 
 /* expose login status to the hbs templates */
-// app.locals.isLoggedIn = true;
-// app.locals.isAdmin = true;
+
 // let's set every user as admin for the inital dev phase
 app.use(require("./middlewares/exposeLoginStatus"));
 
-// this will be usefull for the login/signin lesson
+
+// BELOW => DEV MODE !!!!! TO AVOID LOGIN/LOGOUT INFERNO
+
+// app.locals.isLoggedIn = true;
+// app.locals.isAdmin = true;
+// app.locals.currentUser = {
+//   email: "foo@bar.baz",
+//   avatar: "https://payload143.cargocollective.com/1/2/66133/5178589/url.gif"
+// }
+
+
 
 // ROUTING
 app.use("/", require("./routes"));
