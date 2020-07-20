@@ -1,0 +1,7 @@
+.UserCard {
+  color: white;
+}
+
+.UserCard .name {
+  font-size: 40px;
+}

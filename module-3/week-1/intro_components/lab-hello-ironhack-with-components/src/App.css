@@ -1,0 +1,7 @@
+.InfoBox {
+  max-width: 200px;
+}
+
+.InfoBox .image {
+  height: 50px;
+}
