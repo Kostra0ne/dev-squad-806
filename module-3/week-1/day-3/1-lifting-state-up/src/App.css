@@ -1,0 +1,46 @@
+.App {
+  padding: 80px;
+}
+
+.Teams {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.MemberCard.team-racoon {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url("https://i.ytimg.com/vi/M5JFeTtSS3c/maxresdefault.jpg");
+}
+
+.MemberCard.team-honey-badger {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/v1555274413/shape/mentalfloss/istock-498886489.jpg?itok=-OAx7AFR");
+}
+
+.MemberCard {
+  background-size: cover;
+  color: white;
+
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  min-height: 100px;
+}
+
+.MemberCard > * {
+  margin-bottom: 20px;
+}
+
+.btn-filter {
+  padding: 10px;
+  margin: 5px;
+}
+
+.style-input {
+  padding: 10px;
+  font-size: 16px;
+}
