@@ -1,0 +1,40 @@
+.card-credit {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 5px;
+  width: 340px;
+}
+.card-type {
+  text-align: right;
+}
+
+.card-type img {
+  width: 64px;
+}
+
+.card-number {
+  font-size: 1.75rem;
+  margin: 0 auto;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+.card-number .col {
+  align-self: flex-end;
+  margin: 0 10px 5px;
+}
+
+.card-last-digits {
+  font-size: 2.5rem;
+}
+
+.card-expiration {
+  margin-right: 20px;
+}

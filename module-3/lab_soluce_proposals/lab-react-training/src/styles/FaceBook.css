@@ -1,0 +1,10 @@
+.Profile {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.Profile img {
+  height: 100px;
+}
