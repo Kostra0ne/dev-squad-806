@@ -1,0 +1,27 @@
+@import "variables";
+
+.Home {
+  height: calc(100vh - #{$nav-height});
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url("https://wallpapercave.com/wp/wp3099593.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $color-secondary;
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+
+  &__resources {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+}

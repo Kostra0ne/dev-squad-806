@@ -1,0 +1,6 @@
+.Pokemon-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  padding: 10px;
+  min-height: 80vh;
+}

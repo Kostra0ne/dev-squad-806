@@ -1,0 +1,12 @@
+.Container {
+  width: 100%;
+  margin: 50px auto;
+
+  @media (min-width: 600px) {
+    width: 80%;
+  }
+
+  @media (min-width: 1281px) {
+    width: 60%;
+  }
+}

@@ -1,0 +1,32 @@
+@import "variables";
+
+.Card {
+  border-radius: 8px;
+  padding: 20px 30px;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 150px;
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  &__content {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+
+  &--light {
+    box-shadow: 0 5px 28px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  }
+  &--dark {
+    box-shadow: 0 5px 28px rgba(255, 255, 255, 0.25),
+      0 5px 5px rgba(255, 255, 255, 0.22);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}

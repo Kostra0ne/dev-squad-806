@@ -1,0 +1,7 @@
+.CardResource {
+  transition: transform 0.3s ease-in;
+}
+
+.CardResource:hover {
+  transform: translateY(-10px);
+}

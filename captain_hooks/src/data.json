@@ -1,0 +1,24 @@
+{
+  "resources": [
+    {
+      "url": "https://reactjs.org/docs/hooks-overview.html",
+      "title": "React Hooks Documentation",
+      "description": "React official documentation on Hooks"
+    },
+    {
+      "url": "https://overreacted.io/a-complete-guide-to-useeffect/",
+      "title": "React useEffect by Dan Abramov",
+      "description": "React core developer Dan Abramov explains useEffect in details"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=J-g9ZJha8FE",
+      "title": "Custom Hooks by Tanner Linsley",
+      "description": "A youtube video about creating custom hooks"
+    },
+    {
+      "url": "https://usehooks.com",
+      "title": "useHooks.com",
+      "description": "useHooks is a website referencing the most common custom hooks"
+    }
+  ]
+}

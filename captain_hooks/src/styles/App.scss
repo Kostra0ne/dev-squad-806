@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,900&display=swap");
+@import "./variables";
+@import "./typography.scss";
+@import "./utils.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input[type="button"],
+input[type="submit"] a {
+  cursor: pointer;
+}
+
+.App {
+  background: #141e30;
+  background: -webkit-linear-gradient(to top, #243b55, #141e30);
+  background: linear-gradient(to top, #243b55, #141e30);
+  background-attachment: fixed;
+  color: ghostwhite;
+  min-height: 100vh;
+  overflow: hidden;
+}

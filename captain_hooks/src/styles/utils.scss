@@ -1,0 +1,46 @@
+@import "./variables";
+
+.d-flex {
+  display: flex;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.mx-1 {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.mx-2 {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.m-2 {
+  margin: 12px;
+}
+
+.mx-3 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.mx-4 {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.mx-5 {
+  margin-left: 48px;
+  margin-right: 48px;
+}
+
+.react-blue {
+  color: $react-blue;
+}
+
+.h3 {
+  font-size: 2.5rem;
+}

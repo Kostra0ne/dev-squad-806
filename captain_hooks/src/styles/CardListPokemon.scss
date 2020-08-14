@@ -1,0 +1,47 @@
+.CardListPokemon {
+  padding: 10px 20px;
+  border: 4px solid;
+  border-radius: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__name {
+    color: rgb(254, 254, 136);
+  }
+
+  &__image-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid;
+    overflow: hidden;
+    transform: translateX(calc(-100% + 50%));
+  }
+
+  &__image {
+    object-fit: cover;
+    object-position: 0 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ScrollMenu {
+  max-height: 70vh;
+  padding: 20px;
+  overflow-y: scroll;
+  box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1),
+    0 2px 4px -1px rgba(255, 255, 255, 0.06);
+}
+
+.ScrollMenu::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}

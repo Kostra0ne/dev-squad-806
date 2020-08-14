@@ -1,0 +1,23 @@
+@import "variables";
+
+.NavMain {
+  position: sticky;
+  top: 0;
+  background-color: $dark;
+  color: $color-secondary;
+  height: $nav-height;
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+  }
+
+  &__link.active {
+    color: dodgerblue;
+  }
+}
